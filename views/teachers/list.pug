@@ -1,0 +1,28 @@
+extends ../layout.pug
+
+block content
+
+  h1 Lista de profes
+  table.table
+    thead
+      tr
+        th Nombre
+        th Apellidos
+        th DNI
+        th Edad
+        th Departamento
+        th Operativo
+      tbody
+        each prof in profesores
+          tr
+            td= prof.nombre
+            td= prof.apellidos
+            td= prof.dni
+            td= prof.edad
+            td= prof.departamento
+            td= prof.operativo
+  //-           td
+  //-             a.btn.btn-info.btn-sm(href="/students/"+prof._id) Ver
+  //-             a.btn.btn-primary.btn-sm(href="/students/edit/" + prof._id) Editar
+  //-             a.btn.btn-warning.btn-sm(href="/students/delete/" + prof._id, onclick="return confirm('¿Seguro que deseas eliminar el estudiante?')") Eliminar
+  //- a.btn.btn-success.btn-block(href="/students/new") Añadir nuevo estudiante

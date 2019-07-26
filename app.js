@@ -8,6 +8,8 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var testRouter = require('./routes/test');
 var studentsRouter = require('./routes/students');
+var teachersRouter = require('./routes/teachers');
+
 var apiRouter = require('./routes/api');
 
 
@@ -31,6 +33,11 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/test', testRouter);
 app.use('/students', studentsRouter);
+app.use('/teachers', teachersRouter);
+// app.use('/teachers', (req, res, next)=> {
+//   console.log('')
+//   next();
+// });
 app.use('/api', apiRouter);
 
 
